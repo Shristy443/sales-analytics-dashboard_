@@ -59,10 +59,14 @@
 # )
 
 # print(monthly_sales)
-
+import os
 import pandas as pd
 
-df = pd.read_csv("cleaned_sales.csv")
+# df = pd.read_csv("cleaned_sales.csv")
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+CSV_PATH = os.path.join(BASE_DIR, "cleaned_sales.csv")
+
+df = pd.read_csv(CSV_PATH)
 df["Order Date"] = pd.to_datetime(df["Order Date"])
 
 # Create Year and Month columns
