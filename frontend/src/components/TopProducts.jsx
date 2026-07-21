@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import BASE_URL from "./api";
 
 const TopProducts = () => {
 
@@ -8,7 +9,7 @@ const TopProducts = () => {
   useEffect(() => {
 
     axios
-      .get("http://127.0.0.1:5000/top-products")
+      .get(`${BASE_URL}/search?product=${query}`)
       .then((res) => {
         setProducts(res.data);
       });

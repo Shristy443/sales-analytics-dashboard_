@@ -41,6 +41,7 @@
 
 import { useEffect, useState } from "react";
 import axios from "axios";
+import BASE_URL from "./api";
 import {
   BarChart,
   Bar,
@@ -56,8 +57,8 @@ const RegionChart = ({ year }) => {
 
   useEffect(() => {
     const url = year
-      ? `http://127.0.0.1:5000/region-sales?year=${year}`
-      : "http://127.0.0.1:5000/region-sales";
+      ? `${BASE_URL}/region-sales?year=${year}`
+      : `${BASE_URL}/region-sales`;
 
     axios
       .get(url)

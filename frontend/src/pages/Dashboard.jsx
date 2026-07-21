@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import BASE_URL from "./api";
 import SummaryCards from "../components/SummaryCards";
 import MonthlyChart from "../components/MonthlyChart";
 import CategoryChart from "../components/CategoryChart";
@@ -14,16 +15,17 @@ import Navbar from "../components/Navbar";
 import StatsCards from "../components/StatsCards";
 
 
-const Dashboard = () => {
+const Dashboard = () => {analytics
   const [summary, setSummary] = useState({});
   const [loading, setLoading] = useState(true);
   const [year, setYear] = useState("");
 
   useEffect(() => {
     setLoading(true);
+    // const BASE_URL="https://sales-analytics-dashboard-6-f3ws.onrender.com";
      const url = year
-    ? `http://127.0.0.1:5000/summary/${year}`
-    : "http://127.0.0.1:5000/summary";
+    ? `${BASE_URL}/summary/${year}`
+    : `${BASE_URL}/summary`;
     axios
       .get(url)
       .then((response) => {

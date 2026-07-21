@@ -5,7 +5,9 @@ from flask import request
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
-CORS(app, origins=["http://localhost:5173"])
+CORS(app, origins=["http://localhost:5173"
+                   "https://your-frontend-url.vercel.app"
+                   ])
 
 @app.route("/")
 def home():

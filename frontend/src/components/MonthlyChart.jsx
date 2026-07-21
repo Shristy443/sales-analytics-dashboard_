@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import BASE_URL from "./api";
 import {
  LineChart,
  Line,
@@ -11,14 +12,17 @@ import {
 } from "recharts";
 
 const MonthlyChart = ({ year }) => {
+  const [data, setData] = useState([]);
+   useEffect(() => {
  const url = year
-  ? `http://127.0.0.1:5000/monthly-sales?year=${year}`
-  : "http://127.0.0.1:5000/monthly-sales";
+  ? `${BASE_URL}/monthly-sales?year=${year}`
+  : `${BASE_URL}/monthly-sales`;
 
-axios.get(url).then((res) => setData(res.data));
-useEffect(() => {
-  // fetch data
-}, [year]);
+    axios
+      .get(url)
+      .then((res) => setData(res.data))
+      .catch((err) => console.error(err));
+  }, [year]);
 };
 
 export default MonthlyChart;
