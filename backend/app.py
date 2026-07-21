@@ -1,6 +1,6 @@
 from flask import Flask
 from flask_cors import CORS
-from analysis import *
+from backend.analysis import *
 from flask import request
 from flask import Flask, request, jsonify
 
