@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import BASE_URL from "./api";
+import BASE_URL from "../api";
 
 const SearchProduct = () => {
 

@@ -58,7 +58,7 @@
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-import BASE_URL from "./api";
+import BASE_URL from "../api";
 import {
   BarChart,
   Bar,
@@ -74,8 +74,8 @@ const CategoryChart = ({ year }) => {
 
   useEffect(() => {
     const url = year
-      ? `${BASE_URL}/Category-sales?year=${year}`
-      : `${BASE_URL}/Category-sales`;
+      ? `${BASE_URL}/category-sales?year=${year}`
+      : `${BASE_URL}/category-sales`;
 
     axios
       .get(url)

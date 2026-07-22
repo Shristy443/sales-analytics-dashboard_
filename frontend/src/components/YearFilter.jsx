@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import BASE_URL from "../api";
 const YearFilter = ({ onSelect }) => {
   const [years, setYears] = useState([]);
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:5000/years")
+       .get(`${BASE_URL}/years`)
       .then((res) => setYears(res.data))
       .catch((err) => console.log(err));
   }, []);

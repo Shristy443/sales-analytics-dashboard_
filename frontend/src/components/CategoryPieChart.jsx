@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import BASE_URL from "../api";
 import {
   PieChart,
   Pie,
@@ -16,8 +17,8 @@ const CategoryPieChart = ({ year }) => {
 
   useEffect(() => {
     const url = year
-      ? `http://127.0.0.1:5000/category-sales?year=${year}`
-      : "http://127.0.0.1:5000/category-sales";
+         ? `${BASE_URL}/category-sales?year=${year}`
+    : `${BASE_URL}/category-sales`;
 
     axios
       .get(url)

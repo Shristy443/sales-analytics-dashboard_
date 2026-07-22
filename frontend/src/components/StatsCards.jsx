@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "./StatsCards.css";
+import BASE_URL from "../api";
 
 const StatsCards = () => {
   const [stats, setStats] = useState({});
 
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:5000/stats")
+      .get(`${BASE_URL}/stats`)
       .then((response) => {
         setStats(response.data);
       })

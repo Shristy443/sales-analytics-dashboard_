@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import BASE_URL from "./api";
+import BASE_URL from "../api";
 import SummaryCards from "../components/SummaryCards";
 import MonthlyChart from "../components/MonthlyChart";
 import CategoryChart from "../components/CategoryChart";
@@ -15,7 +15,7 @@ import Navbar from "../components/Navbar";
 import StatsCards from "../components/StatsCards";
 
 
-const Dashboard = () => {analytics
+const Dashboard = () => {
   const [summary, setSummary] = useState({});
   const [loading, setLoading] = useState(true);
   const [year, setYear] = useState("");
