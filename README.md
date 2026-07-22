@@ -178,7 +178,7 @@ Database integration
 Shristy Kewat
 
 GitHub: https://github.com/Shristy443
-LinkedIn: (Add your LinkedIn profile link here)
+LinkedIn:www.linkedin.com/in/shristi-kewat-b595a533b
 ⭐ Support
 
 If you found this project helpful, consider giving it a ⭐ on GitHub. It motivates me to keep learning and building more projects.
