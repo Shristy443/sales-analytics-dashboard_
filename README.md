@@ -123,7 +123,69 @@ Compares sales across categories.
 Visualizes sales across different regions.
 
 🏆 Top Products
+⚙️ Installation
+Clone Repository
+git clone https://github.com/Shristy443/sales-analytics-dashboard_.git
 
+cd sales-analytics-dashboard_
+Backend Setup
+cd backend
+
+python -m venv venv
+
+venv\Scripts\activate
+
+pip install -r requirements.txt
+
+python app.py
+
+Backend runs on
+
+http://127.0.0.1:5000
+Frontend Setup
+cd frontend
+
+npm install
+
+npm run dev
+
+Frontend runs on
+
+http://localhost:5173
+📚 What I Learned
+
+Through this project I learned:
+
+Data Cleaning using Pandas
+Exploratory Data Analysis
+REST API Development using Flask
+React Frontend Development
+API Integration using Axios
+Dashboard Design
+Git & GitHub
+Deploying Full Stack Projects on Render
+Debugging CORS and Deployment Issues
+🔮 Future Improvements
+Authentication
+Download reports as PDF/Excel
+Interactive filters
+Advanced analytics
+Forecasting using Machine Learning
+More chart types
+Database integration
+👩‍💻 Author
+
+Shristy Kewat
+
+GitHub: https://github.com/Shristy443
+LinkedIn: (Add your LinkedIn profile link here)
+⭐ Support
+
+If you found this project helpful, consider giving it a ⭐ on GitHub. It motivates me to keep learning and building more projects.
+
+📌 Note
+
+This project was created as part of my Data Analytics learning journey. It represents my first step into building real-world analytics applications by combining Python, Flask, React, and data visualization to transform raw sales data into actionable insights.
 Displays the top-selling products.
 
 🔍 Product Search
