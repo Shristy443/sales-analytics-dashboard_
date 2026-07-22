@@ -5,7 +5,14 @@ from flask import request
 from flask import Flask, request, jsonify
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={
+    r"/*": {
+        "origins": [
+            "http://localhost:5173",
+            "https://sales-analytics-dashboard-8-ol96.onrender.com"
+        ]
+    }
+})
                 
 
 @app.route("/")
