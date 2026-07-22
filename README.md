@@ -7,7 +7,7 @@ This project is my first Data Analytics project and marks the beginning of my jo
 🚀 Live Demo
 
 Frontend:
-https://YOUR-FRONTEND.onrender.com
+https://sales-analytics-dashboard-8-ol96.onrender.com
 
 Backend API:
 https://sales-analytics-dashboard-6-f3ws.onrender.com
